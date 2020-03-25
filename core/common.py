@@ -41,7 +41,7 @@ def convolutional(input_data, filters_shape, trainable, name, downsample=False, 
                                    dtype=tf.float32, initializer=tf.constant_initializer(0.0))
             conv = tf.nn.bias_add(conv, bias)
 
-        if activate == True: conv = tf.nn.leaky_relu(conv, alpha=0.1)
+        if activate == True: conv = tf.nn.relu(conv, alpha=0.1)
 
     return conv
 
